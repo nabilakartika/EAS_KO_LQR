@@ -17,7 +17,7 @@ inputs = {'r'};
 outputs = {'x'; 'phi'};
 
 sys_cl = ss(Ac,Bc,Cc,Dc,'statename',states,'inputname',inputs,'outputname',outputs);
-
+figure(1)
 t = 0:0.01:5;
 r =0.2*ones(size(t));
 [y,t,x]=lsim(sys_cl,r,t);
