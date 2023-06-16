@@ -17,6 +17,7 @@ sys_cl = ss(Ac,Bc,Cc,Dc,'statename',states,'inputname',inputs,'outputname',outpu
 
 t = 0:0.01:5;
 r =0.2*ones(size(t));
+figure(2)
 [y,t,x]=lsim(sys_cl,r,t);
 [AX,H1,H2] = plotyy(t,y(:,1),t,y(:,2),'plot');
 set(get(AX(1),'Ylabel'),'String','cart position (m)')
